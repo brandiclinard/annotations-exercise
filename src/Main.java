@@ -1,4 +1,6 @@
 public class Main {
+//    @SuppressWarnings("depreciation")
+    @Deprecated
     public static void main(String[] args) {
         Author author = new Author("Sandi", "Metz");
 
@@ -8,7 +10,5 @@ public class Main {
         for (String book: author.getBooks()) {
             System.out.println(book);
         }
-
-        author.fullName();
     }
 }
