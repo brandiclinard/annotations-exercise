@@ -15,7 +15,7 @@ public class Author extends Person {
     /**
      * @deprecated Use publishedBooks instead
      */
-    @Deprecated
+//    @Deprecated
     @SuppressWarnings("unchecked")
     public List<String> getBooks() {
         return books;
@@ -31,13 +31,13 @@ public class Author extends Person {
         books.add(book);
     }
 
-//    @Override
-//    public String fullName() {
-//        return super.fullName();
-//    }
-
-    public String sortName() {
+    @Override
+    public String fullName() {
         return String.format("%s, %s", lastName, firstName);
-//        return fullName();
     }
+
+//    public String sortName() {
+//        return String.format("%s, %s", lastName, firstName);
+////        return fullName();
+//    }
 }
