@@ -15,21 +15,29 @@ public class Author extends Person {
     /**
      * @deprecated Use publishedBooks instead
      */
-    @Deprecated
+//    @Deprecated
+    @SuppressWarnings("unchecked")
     public List<String> getBooks() {
         return books;
     }
 
+    @SuppressWarnings("unchecked")
     public List<String> publishedBooks() {
         return books;
     }
 
+    @SuppressWarnings("unchecked")
     public void addBook(String book) {
         books.add(book);
     }
 
     @Override
-    public String sortName() {
+    public String fullName() {
         return String.format("%s, %s", lastName, firstName);
     }
+
+//    public String sortName() {
+//        return String.format("%s, %s", lastName, firstName);
+////        return fullName();
+//    }
 }
